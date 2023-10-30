@@ -18,7 +18,11 @@ const App = () => {
   ])
 
   const handleSquareClick = (clickedSquareIndex) => {
-    alert(clickedSquareIndex)
+    //variable holding copy of current state
+    let updatedBoard = [...board]
+   // use index to update the current Square's value with emoji
+   updatedBoard[clickedSquareIndex] = "🌲"
+   setBoard(updatedBoard)
   }
 
   return (
